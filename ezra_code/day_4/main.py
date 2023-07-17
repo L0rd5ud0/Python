@@ -1,7 +1,7 @@
 def only_floats(a,b):
-  if a.is_integer() and b.is_integer():
+  if isinstance(a, int) and isinstance(b, int):
     return 2
-  elif a.is_integer() == False or b.is_integer() == False:
+  elif isinstance(a, int) == False and isinstance(b, int) == True or isinstance(b, int) == False and isinstance(a, int) == True:
     return 1
   else:
     return 0
