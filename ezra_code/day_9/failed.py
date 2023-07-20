@@ -8,19 +8,12 @@
 
 def zeros_list(list):
     for index in range(0, len(list)):
-        for num in list:
-            if num == 0:
-                if index + 1 < len(list) - 1:
-                    print(f"{index} : index")
-                    temp = list[index + 1]
-                    print(f"This is temp: {temp}")
-                    list[index + 1] = list[index]
-                    list[index] = temp
-                else:
-                    temp = list[len(list) - 1]
-                    print(f"This is temp: {temp}")
-                    list[len(list) - 1] = list[index]
-                    list[index] = temp
+        #checks if at that index the value is 0
+        if list[index] == 0:
+            #removes it from the list
+            x = list.pop(index)
+            #appends it to the end of the list
+            list.append(x)
 
     return list
 
